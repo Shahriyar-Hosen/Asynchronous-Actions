@@ -3,6 +3,7 @@ const {
   delayActionMiddleware,
   fetchTodosMiddleware,
 } = require("./middlewares");
+const { fetchTodos } = require("./function");
 
 // initial state
 const initialState = {
@@ -51,6 +52,4 @@ store.subscribe(() => {
 //     payload: "Learn Redux from LWS",
 // });
 
-store.dispatch({
-  type: "todos/fetchTodos",
-});
+store.dispatch(fetchTodos);
