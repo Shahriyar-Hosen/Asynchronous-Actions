@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 
+// Thunk function
 const fetchTodos = async (dispatch, getState) => {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/todos?_limit=5"

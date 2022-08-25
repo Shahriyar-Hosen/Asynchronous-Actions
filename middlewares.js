@@ -14,7 +14,7 @@ const delayActionMiddleware = (store) => (next) => (action) => {
   return next(action);
 };
 
-const fetchTodosMiddleware = (store) => (next) => async (action) => {
+const fetchAsyncMiddleware = (store) => (next) => (action) => {
   if (typeof action === "function") {
     return action(store.dispatch, store.getState);
   }
@@ -24,5 +24,5 @@ const fetchTodosMiddleware = (store) => (next) => async (action) => {
 
 module.exports = {
   delayActionMiddleware,
-  fetchTodosMiddleware,
+  fetchAsyncMiddleware,
 };
